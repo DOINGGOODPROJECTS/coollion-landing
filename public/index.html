@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../src/assets/Icons/favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../src/style/main.scss" />
+    <script src="../src/js/main.js" defer type="module"></script>
+    <title> Cool Lion Fi | Lend your USDC to businesses going green worldwide</title>
+    <script src="//code.tidio.co/wfld0ws6iuyrch1etojhsaiuwvbglp2l.js" async></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KNLPJ9NFV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0KNLPJ9NFV');
+    </script>
+  </head>
+  <body>
+    
+    <!-- langugage select tags -->
+    <div class="appbar__language">
+      <select name="language" id="language" class="selectpickers">
+        <option value="en">EN <img src="../src/assets/Icons/fr.png" alt=""></option>
+        <option value="fr">FR</option>
+      </select>
+    </div>
+
+
+    <!-- modal newsletter -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="justify-content:flex-end !important;column-gap:25px !important">
+           
+            <h3 class="modal-title" >
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+              </svg></button>
+            </h3>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div >
+                <div class="Newsletter">
+                  <div class="content">
+                    <h2>Subscribe to our newsletter</h2>
+                    <div class="form">
+                      <input type="email" placeholder="Your email" id="emailMobal" />
+                      <button id="buttonMobal">Subscribe</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- finish modal newsletter -->
+     <!-- modal newsletter -->
+   
+    <!-- finish modal newsletter -->
+
+
+    <!-- here it's the content en fonction du language selectioner -->
+    <div id="content">
+    
+    </div>
+
+    <!-- here it's forms modal html tags -->
+    <div class="modal fade" id="myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="justify-content:flex-end !important;column-gap:25px !important">
+           
+            <h3 class="modal-title" >
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+              </svg></button>
+            </h3>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div >
+                <div class="" style="display:flex;justify-content:center;align-items:center">
+                  <div style="width: 80%;">
+                    <h2 style="text-transform: capitalize;text-align:center;font-weight:bold">give your interest</h2>
+                    <form id="signUp">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">email address</label>
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Your Interest</label>
+                        <select class="form-control form-control-lg" required>
+                          <option value="Become a lender">Become a lender</option>
+                          <option value="Become an originator">Become an originator</option>
+                          <option value="Become a supporter">Become a supporter</option>
+                        </div>
+                      </select>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Additional Comments</label>
+                        <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- ------------------------ -->
+
+
+    <!-- here it's the formSubmit service for send one email during the forms modal send the content in sendinblue the form is send by js for send one email at mr Richard -->
+    <form action="https://formsubmit.co/me@coollionfi.com" method="post" style="opacity: 0;height:0px!important">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <input type="email" name="email" id="emaill">
+      <input type="text" name="interest" id="interest">
+      <input type="text" name="comments" id="comments">
+      <input type="hidden" name="_next" value="https://coollionfi.com/">
+      <input type="hidden" name="_subject" value="COOL LION FINANCE LANDING PAGE SIGN UP FORMS">
+      <input type="hidden" name="_template" value="table">
+      <button type="submit" id="sendEmail">submit</button>
+    </form>
+    
+  </body>
+</html>

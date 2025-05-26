@@ -1,0 +1,18 @@
+@mixin Tab {
+  @media (max-width: 930px) and (min-width: 700px) {
+    @content;
+  }
+}
+
+
+@mixin Mobile {
+  @media (max-width: 700px) and (min-width: 0px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 930px) and (max-width: 10000px) {
+    @content;
+  }
+}

@@ -1,0 +1,109 @@
+@use "../Helpers/Palette.scss" as Palette;
+@use "../Helpers/Mixin.scss" as Mixin;
+
+.Foot {
+  height: 40vh;
+  width: 100%;
+  background-color: Palette.$secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footerbar {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 5vh 10vw 10vh 10vw;
+  h4 {
+    color: Palette.$primary;
+    font-weight: bold;
+  }
+
+
+  .logo {
+    img {
+      width: 100px;
+    }
+
+    p {
+      width: 100px;
+      font-size: 0.5em;
+      color: Palette.$featurePrimary;
+      text-align: center;
+    }
+  }
+
+  .join {
+    button {
+      border: 1px solid Palette.$primary;
+      border-radius: 5px;
+      padding: 10px 40px;
+      background-color: Palette.$primary;
+      color: Palette.$secondary;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid Palette.$primary;
+        background-color: Palette.$secondary;
+        color: Palette.$primary;
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    &:hover {
+      text-decoration: underline;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.footernetwork {
+  border-top: 1px solid Palette.$featurePrimary;
+  height: 15%;
+  width: 100%;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+
+  .network {
+    z-index: 9999999999999999999999999999999999999;
+    margin-top: 10px;
+    a {
+      width: 35px;
+      padding: 20px 10px;
+      margin: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+@include Mixin.Mobile {
+  .Foot {
+    min-height: 80vh;
+  }
+  .footerbar {
+    row-gap: 20px;
+    column-gap: 20px;
+    min-height: max-content !important;
+  }
+}

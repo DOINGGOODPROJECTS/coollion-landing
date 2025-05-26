@@ -1,0 +1,89 @@
+@use "../Helpers/Palette.scss" as Palette;
+@use "../Helpers/Mixin.scss" as Mixin;
+
+.About {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: Palette.$about;
+
+  h2 {
+    font-weight: bold;
+    color: Palette.$secondary;
+    margin-top: 10vh;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  p {
+    color: Palette.$featurePrimary;
+    text-align: center;
+    margin-top: 3vh;
+  }
+
+  a {
+    color: Palette.$header;
+    text-decoration: none;
+  }
+
+  .cards {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+    column-gap: calc(100% / 25);
+    row-gap: 15vh;
+    flex-wrap: wrap;
+
+    &__items {
+      border-radius: 5px;
+      padding: 20px;
+      background-color: Palette.$secondary;
+      width: calc(100% / 5);
+      min-width: 200px;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        text-align: start;
+        color: Palette.$primary;
+      }
+
+      p {
+        text-align: start;
+        margin-bottom: 5vh;
+        font-size: 0.9em;
+      }
+
+      button {
+        background-color: Palette.$primary;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: Palette.$secondary;
+        font-size: 0.8em;
+        cursor: pointer;
+        text-transform: uppercase;
+        align-self: center;
+      }
+    }
+  }
+}
+
+
+@include Mixin.Mobile{
+  .About {
+    padding: 0 5%;
+    padding-bottom: 15vh;
+  }
+}

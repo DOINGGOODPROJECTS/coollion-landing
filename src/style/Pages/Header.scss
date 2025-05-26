@@ -1,0 +1,403 @@
+@use "../Helpers/Palette.scss" as Palette;
+@use "../Helpers/Mixin.scss" as Mixin;
+
+.header {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: Palette.$primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appbar {
+  width: 80%;
+  height: 13vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: Palette.$secondary;
+
+  &__logo {
+    width: 10%;
+    height: 80%;
+    img {
+      width: 75%;
+      min-width: 70px;
+    }
+  }
+
+  &__navbar {
+    width: 60%;
+    min-width: 400px;
+    height: 100%;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      li {
+        list-style: none;
+        margin: 10px;
+        a {
+          text-decoration: none;
+          color: Palette.$secondary;
+          font-size: 1.1em;
+          &:hover {
+            text-decoration: underline Palette.$secondary;
+            transition: text-decoration 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  &__sendEmail {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    button {
+      background-color: Palette.$secondary;
+      color: Palette.$primary;
+      border: 1px solid Palette.$secondary;
+      padding: 10px 50px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background-image: none;
+        background-color: Palette.$primary;
+        color: Palette.$secondary;
+        border: 1px solid Palette.$secondary;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__language {
+    position: absolute;
+    top: 10;
+    right: 10;
+  }
+}
+
+.appbarMobile {
+  display: none;
+}
+
+.appbarMobileNvabar {
+  display: none;
+}
+
+.headerContent {
+  width: 90%;
+  min-height: 87vh;
+  max-height: 100vh;
+  display: flex;
+  align-self: end;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
+
+  &__text {
+    min-width: 45%;
+    max-width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    color: Palette.$secondary;
+    row-gap: 20px;
+
+    h1 {
+      font-size: 3em;
+      color: Palette.$secondary;
+      text-align: center;
+      text-align: start;
+      font-weight: Bold;
+      word-wrap: break-word;
+      margin: 0;
+      padding: 0;
+      text-transform: capitalize;
+    }
+
+    p{
+      font-size: 1.2em;
+    }
+
+    img {
+      align-self: flex-start;
+      width: 50%;
+    }
+
+    .navHome {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      column-gap: 50px;
+
+      button {
+        background-color: Palette.$secondary !important;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 30px;
+        color: Palette.$header;
+        font-size: 1.1em;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .lastchild {
+        background-color: Palette.$header !important;
+        color: white;
+        border: 1px solid Palette.$secondary !important;
+        img {
+          width: 40px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    min-width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    pointer-events: none !important;
+    cursor: none !important;
+    img {
+      width: 90%;
+      min-width: 200px;
+      pointer-events: none !important;
+      cursor: none !important;
+    }
+    .lastImg {
+      position: absolute;
+      top: -160px;
+      right: 0;
+      img {
+        width: 100%;
+        pointer-events: none !important;
+        cursor: none !important;
+      }
+    }
+  }
+
+  &__design {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    pointer-events: none !important;
+    cursor: none !important;    
+  }
+}
+
+@include Mixin.Tab {
+  .header {
+    max-height: initial;
+
+  }
+
+  .appbar {
+    margin-top: 5vh;
+    width: 90vw;
+  }
+  .headerContent {
+    align-items: center;
+    flex-direction: column-reverse;
+    max-height: none;
+    &__text {
+      width: 190% !important;
+      min-width: 100% !important;
+      margin-bottom: 10vh;
+      h1 {
+        width: 80%;
+        text-align: center;
+      }
+
+      p {
+        width: 70%;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: max-content;
+      margin-bottom: 10vh;
+    }
+  }
+}
+
+@include Mixin.Mobile {
+  .appbar {
+    display: none;
+  }
+
+  .appbarMobile {
+    width: 100vw !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: Palette.$primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 10vh;
+    color: Palette.$secondary;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+    button {
+      background-color: Palette.$primary;
+      border: none;
+      color: Palette.$secondary;
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 20px;
+      height: 100%;
+    }
+
+    .logo {
+      width: 30px;
+      height: 30px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .appbarMobileNvabar {
+    height: 100vh;
+    width: 80vw;
+    background-color: Palette.$secondary;
+    z-index: 100000;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 10vh;
+      background-color: Palette.$primary;
+      color: Palette.$secondary;
+      font-size: 1.5em;
+      margin-bottom: 100px;
+
+      padding: 0 10px;
+      .logo {
+        width: 30px;
+        height: 30px;
+        img {
+          width: 100%;
+        }
+      }
+
+      button {
+        background-color: Palette.$primary;
+        border: none;
+        color: Palette.$secondary;
+        font-size: 1.5em;
+        cursor: pointer;
+        padding: 5px 10px;
+      }
+    }
+
+    .listitem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10vh;
+      color: Palette.$primary;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        column-gap: 40px;
+        row-gap: 20px;
+        a {
+          width: 100%;
+          height: 100%;
+        }
+        li {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 10px;
+          &:active {
+            background-color: Palette.$primary;
+            color: Palette.$secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .showNavbar {
+    display: block;
+  }
+
+  .headerContent {
+    .navHome{
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+
+    flex-direction: column-reverse !important;
+    width:90% !important;
+    &__text {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100vw !important;
+      h1 {
+        font-size: 2em;
+      }
+  
+  
+    }
+  
+    &__img {
+      min-width: 65%;
+    }
+  
+    &__design {
+      display: none;  
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@use "../Helpers/Palette.scss" as Palette;
+@use "../Helpers/Mixin.scss" as Mixin;
+
+.services {
+  margin: 2vh auto 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 5vh;
+  column-gap: 20px;
+  padding-bottom: 5vh;
+  margin-top: 10vh;
+
+  .service {
+    min-width: 250px;
+    width: 30%;
+    min-height: 450px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5vh 20px;
+    color: Palette.$primary;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid Palette.$primary;
+    text-transform: capitalize;
+    h2 {
+      font-weight: bold;
+      font-size: 1.2em;
+      height: 20%;
+      align-self: start;
+      color: black;
+    }
+
+    h2:first-of-type {
+      font-weight: bold;
+      height: 20%;
+      align-self: start;
+    }
+
+    h2:last-of-type {
+      margin-left: 30px;
+      margin-bottom: 4vh;
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1em;
+      // mix-blend-mode: difference;
+      height: 60px;
+      max-height: 100px;
+      text-align: end;
+      margin-bottom: 12vh;
+      width: 100%;
+      text-transform: lowercase;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+
+    a {
+      border: 1px solid Palette.$primary;
+      border-radius: 5px;
+      padding: 10px 40px;
+      background-color: Palette.$primary;
+      color: Palette.$secondary;
+      font-weight: bold;
+      height: 10%;
+      align-self: end;
+      margin-bottom: 10vh;
+    }
+  }
+}
+
+.services__text {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: auto;
+
+  h2 {
+    margin-bottom: 5vh;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-style: italic;
+  }
+}
+
+.support {
+  background-color: Palette.$primary !important;
+  color: Palette.$secondary !important;
+}
+
+@include Mixin.Mobile {
+  .services {
+    margin-bottom: 30px;
+  }
+
+  .services__text {
+    margin-bottom: 5vh;
+  }
+}

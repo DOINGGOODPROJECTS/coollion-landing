@@ -1,0 +1,62 @@
+@use "./Pages/Header.scss" as Header;
+@use "./Pages/Feature.scss" as Feature;
+@use "./Pages/About.scss" as About;
+@use "./Pages/Footer.scss" as Footer;
+@use "./Pages/Mission.scss" as Mission;
+@use "./Pages/Backers.scss" as Backers;
+@use "./Pages/Newsletter.scss" as Newsletter;
+@use "./Pages/Cards.scss" as Cards;
+@use "./Helpers/Mixin.scss" as Mixin;
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../assets/Fonts//helvetica/Helvetica.ttf");
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("../assets/Fonts/gordita/Gordita.woff");
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../assets/Fonts/calibri/Calibri.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Calibri Gordita Helvetica";
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.alert {
+  z-index: 2000000;
+  position: fixed;
+  margin: 5vh;
+  right: 0;
+  pointer-events: none;
+  display: none;
+  button {
+    margin-left: 20px;
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.show {
+  display: block;
+}
